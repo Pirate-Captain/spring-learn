@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="schoolFactoryBean" class="com.idlebear.springlearn.factorybean.SchoolFactoryBean">
+        <property name="schoolInfo" value="向阳小学,向阳路一号"/>
+    </bean>
+</beans>
