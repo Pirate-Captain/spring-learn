@@ -8,7 +8,7 @@ import com.idlebear.springlearn.bean.PersonInfo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @author zhuyl <a href="mailto:zhuyl@chsi.com.cn">zhu Youliang</a>
+ * @author iaskbear <a href="mailto:iaskbear@google.com">iaskbear</a>
  * @version $Id$
  */
 public class ClassPathXmlApplicationContextTest {

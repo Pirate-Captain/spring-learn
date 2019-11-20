@@ -5,7 +5,7 @@
 package com.idlebear.springlearn.bean;
 
 /**
- * @author zhuyl <a href="mailto:zhuyl@chsi.com.cn">zhu Youliang</a>
+ * @author iaskbear <a href="mailto:iaskbear@google.com">iaskbear</a>
  * @version $Id$
  */
 public class PersonInfo {
