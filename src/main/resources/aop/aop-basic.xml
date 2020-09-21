@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="aopTargetInterface" class="com.idlebear.springlearn.aop.AopTargetInterfaceImpl"/>
+
+    <bean id="aopAdvice" class="com.idlebear.springlearn.aop.basic.AopAdvice"/>
+
+    <bean id="pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+        <property name="pattern" value=".*add.*"/>
+    </bean>
+
+    <bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+        <property name="advice" ref="aopAdvice"/>
+        <property name="pointcut" ref="pointcut"/>
+    </bean>
+
+    <bean id="aopTargetInterfaceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="aopTargetInterface"/>
+        <property name="interceptorNames" value="advisor"/>
+    </bean>
+</beans>
