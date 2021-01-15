@@ -6,4 +6,13 @@
 <!--        <property name="beanA" ref="beanA"/>-->
 <!--        <property name="beanB" ref="beanB"/>-->
     </bean>
+
+    <bean id="parentBean" class="com.idlebear.springlearn.bean.ParentBean" abstract="true">
+        <property name="name" value="zhangsan"/>
+    </bean>
+
+    <!--Check how do the spring merge the child and parent bean when load the beandefinition from xml-->
+    <bean id="childBean" class="com.idlebear.springlearn.bean.ChildBean" parent="parentBean">
+        <property name="age" value="12"/>
+    </bean>
 </beans>
